@@ -1,0 +1,67 @@
+header {
+	margin: 20px 0 30px;
+}
+
+.container {
+	display: flex;
+}
+
+div.left, div.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+div.left {
+	margin-right: 20px;
+}
+
+section table tr:before {
+	content: attr(data-row);
+	margin-right: .5em;
+}
+
+section table tr:first-child td:before {	
+	content: attr(data-col);
+	top: -2.5em;
+	position: relative;
+}
+
+section table {
+	margin: 0 auto;
+}
+
+section table, section tr, section td {
+	border-collapse: collapse;
+	border: 0.1em white solid;
+}
+
+section td {
+	height:	1.5em;
+	width: 1.5em;
+	background-color: #1E88E5;
+	cursor: crosshair;
+}
+
+section#userShips td {
+	cursor: inherit;
+}
+
+section td:hover {
+	background-color: #1565C0;
+}
+
+@media (max-width: 960px) {
+	.container {
+		flex-direction: column;
+	}
+
+	div.left {
+		margin-right: 0px;
+	}
+
+	div.right {
+		margin: 30px 0;
+	}
+}
